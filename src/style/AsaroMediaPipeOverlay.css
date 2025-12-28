@@ -1,0 +1,107 @@
+/* ================= PAGE CONTAINER ================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #333;
+}
+
+/* ================= HEADER ================= */
+.header {
+  border-bottom: 2px solid #4A90E2;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: #4A90E2;
+}
+
+/* ================= CONTROLS ================= */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+/* ================= BUTTON ================= */
+.button {
+  padding: 8px 15px;
+  background-color: #50E3C2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #3ccfb0;
+}
+
+/* ================= IMAGE CONTAINER ================= */
+.image-container {
+  position: relative;
+  margin-bottom: 30px;
+  border: 2px solid #4A90E2;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ================= GRID LAYOUT ================= */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* ================= PANEL ================= */
+.panel {
+  padding: 20px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.panel-title {
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #ccc;
+  color: #333;
+}
+
+/* ================= MEASUREMENTS ================= */
+.measurement-group {
+  margin-top: 15px;
+  padding: 10px 0;
+  border-top: 1px dotted #ddd;
+}
+
+.measurement-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  font-size: 0.95em;
+}
+
+.label {
+  font-weight: normal;
+  color: #555;
+}
+
+.value {
+  font-weight: bold;
+  color: #000;
+}

@@ -1,0 +1,191 @@
+/* ================= BASE ================= */
+.home {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #111;
+}
+
+/* ================= HERO ================= */
+.hero {
+  padding: 110px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff, #f7f7f7);
+}
+
+.hero h1 {
+  font-size: 72px;
+  color: #f1641e;
+  font-family: "Amarante", serif;
+}
+
+.hero h3 {
+  font-size: 28px;
+  margin-top: 12px;
+}
+
+.hero p {
+  max-width: 680px;
+  margin: 18px auto 36px;
+  color: #555;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  min-width: 160px;
+  height: 48px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #111;
+  color: #fff;
+}
+
+.btn.secondary {
+  border: 2px solid #111;
+  color: #111;
+  border-radius: 999px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= ABOUT ================= */
+.about-section {
+  padding: 90px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ================= FEATURES ================= */
+.features {
+  padding: 90px 20px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  padding: 28px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  background: #f1641e;
+  color: #fff;
+  transform: translateY(-6px);
+}
+
+/* ================= PROMO ================= */
+.shop-promo {
+  padding: 80px 20px;
+}
+
+.promo-card {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.promo-text {
+  background: #0f3d45;
+  color: #fff;
+  padding: 60px;
+}
+
+.promo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.promo-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.promo-btn {
+  background: #fff;
+  color: #111;
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+.promo-link{
+    padding: 14px 28px;
+    text-decoration: none;
+    color: white;
+
+}
+.promo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= CTA ================= */
+.cta {
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #111, #333);
+  color: #fff;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 48px; }
+  .hero h3 { font-size: 22px; }
+  .promo-card { grid-template-columns: 1fr; }
+  .promo-text { text-align: center; }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .hero h1 { font-size: 34px; }
+  .hero h3 { font-size: 18px; }
+  .btn { width: 100%; }
+  .promo-image img { height: 220px; }
+}

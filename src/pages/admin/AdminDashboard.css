@@ -1,0 +1,259 @@
+/* ================= ROOT ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: #f5f6fa;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.primary-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.class-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.dashboard {
+  padding: 24px;
+}
+
+.dashboard-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  border: 1px solid #eee;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.stat-card h3 {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+}
+
+.stat-card.highlight {
+  background: linear-gradient(135deg, #111, #333);
+  color: #fff;
+}
+
+.stat-card.highlight h3 {
+  color: #ddd;
+}
+
+.stat-card.highlight p {
+  color: #fff;
+}
+
+.class-thumb {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #f2f2f2;
+}
+.primary-btn:hover {
+  background: #222;
+}
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+.admin-sidebar {
+  width: 240px;
+  background: #ffffff;
+  padding: 24px 20px;
+  border-right: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-sidebar h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f1641e;
+  margin-bottom: 30px;
+}
+
+.admin-sidebar button {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 6px;
+  transition: all 0.25s ease;
+}
+
+.admin-sidebar button:hover {
+  background: #f1641e;
+  color: #fff;
+}
+
+.admin-sidebar button:focus {
+  outline: none;
+  background: #f1641e;
+  color: #fff;
+}
+.admin-main {
+  flex: 1;
+  padding: 30px 36px;
+}
+.admin-main h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.admin-main p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 10px;
+}
+.admin-row {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+}
+.admin-row button {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  background: #ef4444;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.admin-row button:hover {
+  background: #dc2626;
+}
+
+.admin-add {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.admin-add input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.admin-add input:focus {
+  outline: none;
+  border-color: #f1641e;
+}
+
+.admin-add button {
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: none;
+  background: #f1641e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.admin-add button:hover {
+  background: #d95514;
+}
+@media (max-width: 900px) {
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    flex-direction: row;
+    gap: 6px;
+    overflow-x: auto;
+  }
+
+  .admin-sidebar h1 {
+    display: none;
+  }
+
+  .admin-sidebar button {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 500px) {
+  .admin-main {
+    padding: 20px;
+  }
+
+  .admin-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .admin-add {
+    flex-direction: column;
+  }
+}

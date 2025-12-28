@@ -1,0 +1,54 @@
+.player-page {
+  padding: 40px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  margin-top: 20px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.player-page {
+  padding: 40px;
+}
+
+.back-btn {
+  background: transparent;
+  border: none;
+  color: #f1641e;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+.instructor {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+

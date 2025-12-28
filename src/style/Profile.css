@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= PAGE LAYOUT ================= */
+.profile-layout {
+  display: flex;
+  gap: 32px;
+  padding: 32px;
+  background: #f6f8fc;
+  min-height: 100vh;
+}
+
+/* ================= LEFT ================= */
+.profile-left {
+  width: 300px;
+}
+
+.profile-intro-card {
+  background: #fff;
+  padding: 28px 24px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+.profile-avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.profile-intro-card h3 {
+  margin-top: 14px;
+  font-size: 20px;
+  color: #111827;
+}
+
+.sub-text {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #eee;
+}
+
+.profile-stats div strong {
+  font-size: 18px;
+  color: #111827;
+}
+
+.profile-stats span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* ================= RIGHT ================= */
+.profile-main {
+  flex: 1;
+}
+
+/* ================= FOLLOWING ================= */
+.following-box {
+  background: #fff;
+  padding: 26px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+.following-box h3 {
+  font-size: 22px;
+  margin-bottom: 18px;
+  color: #111827;
+}
+
+.following-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.following-row:last-child {
+  border-bottom: none;
+}
+
+.following-row img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.artist-info {
+  flex: 1;
+}
+
+.artist-info h4 {
+  font-size: 16px;
+  margin: 0;
+  color: #111827;
+}
+
+.artist-info p {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ================= CREATE ARTIST ================= */
+.create-artist-box {
+  background: #fff;
+  padding: 26px;
+  border-radius: 18px;
+  margin-top: 26px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+.create-artist-box h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.create-artist-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.create-artist-box input,
+.create-artist-box textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.create-artist-box input:focus,
+.create-artist-box textarea:focus {
+  outline: none;
+  border-color: #f97316;
+}
+
+.create-artist-box textarea {
+  resize: none;
+  height: 90px;
+}
+
+/* ================= EMPTY ================= */
+.empty-text {
+  font-size: 14px;
+  color: #777;
+}
+
+/* ================= BUTTON SYSTEM ================= */
+.btn {
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  transition: all 0.2s ease;
+  width: auto !important;
+}
+
+/* PRIMARY ORANGE BUTTON */
+.btn.primary {
+  background: #f97316;
+  color: #fff;
+  padding: 12px 22px !important;
+}
+
+.btn.primary:hover {
+  background: #ea580c;
+}
+
+/* OUTLINE ORANGE BUTTON */
+.btn.outline {
+  background: transparent;
+  color: #f97316;
+  border: 1.5px solid #f97316;
+  padding: 10px 22px !important; 
+}
+
+.btn.outline:hover {
+  background: rgba(249, 115, 22, 0.08);
+}
+
+/* SMALL BUTTON */
+.btn.small {
+  padding: 8px 18px;
+  font-size: 13px;
+}
+
+/* INLINE BUTTON (CLOSE / HEADER) */
+.btn-inline {
+  width: auto !important;
+  padding: 8px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* UNFOLLOW BUTTON */
+.btn.unfollow {
+  border: 1.5px solid #ef4444;
+  color: #ef4444;
+  background: transparent;
+}
+
+.btn.unfollow:hover {
+  background: #fee2e2;
+}
+
+/* CLICK FEEDBACK */
+.btn:active {
+  transform: scale(0.97);
+}
+/* ================= RESPONSIVE ================= */
+
+/* ---------- TABLET ---------- */
+@media (max-width: 1024px) {
+  .profile-layout {
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .profile-left {
+    width: 260px;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  .profile-layout {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .profile-left {
+    width: 100%;
+  }
+
+  .profile-intro-card {
+    text-align: center;
+  }
+
+  .profile-stats {
+    justify-content: space-around;
+  }
+
+  .profile-main {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .btn.small,
+  .btn-inline {
+    width: auto;
+  }
+
+  .following-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .following-row img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .artist-info {
+    width: 100%;
+  }
+}
+
+/* ---------- SMALL MOBILE ---------- */
+@media (max-width: 480px) {
+  .profile-avatar {
+    width: 64px;
+    height: 64px;
+    font-size: 24px;
+  }
+
+  .profile-intro-card h3 {
+    font-size: 18px;
+  }
+
+  .following-box h3 {
+    font-size: 18px;
+  }
+
+  .create-artist-box h3 {
+    font-size: 18px;
+  }
+
+  .create-artist-box input,
+  .create-artist-box textarea {
+    font-size: 13px;
+  }
+}
