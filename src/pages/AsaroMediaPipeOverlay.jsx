@@ -546,8 +546,36 @@ export default function Asaro_Loomis_Construction_Enhanced() {
                         <div style={styles.measurementItem}><span style={styles.label}>A (Brow) to D (Nose Base)</span><span style={styles.value}>{loomis.AD.toFixed(2)} cm</span></div>
                         <div style={styles.measurementItem}><span style={styles.label}>D (Nose Base) to M (Mouth)</span><span style={styles.value}>{loomis.DM.toFixed(2)} cm</span></div>
                         <div style={styles.measurementItem}><span style={styles.label}>M (Mouth) to E (Chin)</span><span style={styles.value}>{loomis.ME.toFixed(2)} cm</span></div>
+                        <div style={styles.measurementGroup}>
+                            <strong>Pupil Balance & Projection</strong>
+                            <div style={styles.measurementItem}><span style={styles.label}>EC to Left Pupil (LP)</span><span style={styles.value}>{eyeBalance.ECLP.toFixed(2)} cm</span></div>
+                            <div style={styles.measurementItem}><span style={styles.label}>A to LEi</span><span style={styles.value}>{eyeBalance.ALEi.toFixed(2)} cm</span></div>
+                            <div style={styles.measurementItem}><span style={styles.label}>A to REi</span><span style={styles.value}>{eyeBalance.RLEi.toFixed(2)} cm</span></div>
+                            <div style={styles.measurementItem}><span style={styles.label}>D to LEi</span><span style={styles.value}>{eyeBalance.DLEi.toFixed(2)} cm</span></div>
+                            <div style={styles.measurementItem}><span style={styles.label}>D to REi</span><span style={styles.value}>{eyeBalance.DREi.toFixed(2)} cm</span></div>
+                            <div style={styles.measurementItem}><span style={styles.label}>D to REO</span><span style={styles.value}>{eyeBalance.DREo.toFixed(2)} cm</span></div>
+
+                            <div style={styles.measurementItem}><span style={styles.label}>EC to Right Pupil (RP)</span><span style={styles.value}>{eyeBalance.ECRP.toFixed(2)} cm</span></div>
+                            <div style={styles.measurementItem}><span style={styles.label}>Pupil Balance Difference</span><span style={{ ...styles.value, color: '#D9534F' }}>{eyeBalance.diff.toFixed(2)} cm</span></div>
+                            <div style={styles.measurementItem}><span style={styles.label}>Left Pupil (LP) to Chin Line (E)</span><span style={styles.value}>{newMeasures.LPToChin.toFixed(2)} cm</span></div>
+                            <div style={styles.measurementItem}><span style={styles.label}>RP to Chin Line (E)</span><span style={styles.value}>{newMeasures.RPToChin.toFixed(2)} cm</span></div>
+
+                        </div>
                     </div>
 
+
+
+                </div>
+                <div style={{ ...styles.panel, borderLeft: '4px solid #3498DB' }} className="panel2">
+                    <h4 style={{ ...styles.panelTitle, color: '#3498DB' }}>Nose, Mouth, & Ear Ratios</h4>
+                    <div style={styles.measurementGroup}>
+                        <strong>Nose Geometry</strong>
+                        <div style={styles.measurementItem}><span style={styles.label}>Brow (A) to Nose Top (Nt)</span><span style={styles.value}>{newMeasures.AToNt.toFixed(2)} cm</span></div>
+                        <div style={styles.measurementItem}><span style={styles.label}>Nose Height (Nt to Nb)</span><span style={styles.value}>{noseHt.toFixed(2)} cm</span></div>
+                        <div style={styles.measurementItem}><span style={styles.label}>Nose Width (Nb to Nr)</span><span style={styles.value}>{noseMeasure.NbNr.toFixed(2)} cm</span></div>
+                        <div style={styles.measurementItem}><span style={styles.label}>Nose Width (Nt to Nl)</span><span style={styles.value}>{noseMeasure.NtNl.toFixed(2)} cm</span></div>
+                        <div style={styles.measurementItem}><span style={styles.label}>Nose Width (Nt to Nr)</span><span style={styles.value}>{noseMeasure.NrNt.toFixed(2)} cm</span></div>
+                    </div>
                     <div style={styles.measurementGroup}>
                         <strong>Canthal Dimensions & Slant</strong>
                         <div style={styles.measurementItem}><span style={styles.label}>Inter-Canthal Dist. (LEi to REi)</span><span style={styles.value}>{newMeasures.ICD.toFixed(2)} cm</span></div>
@@ -557,33 +585,7 @@ export default function Asaro_Loomis_Construction_Enhanced() {
 
                         <div style={styles.measurementItem}><span style={styles.label}>Right Slant Angle</span><span style={styles.value}>{newMeasures.EyeSlantR.toFixed(2)}`</span></div>
                     </div>
-                    <div style={styles.measurementGroup}>
-                        <strong>Pupil Balance & Projection</strong>
-                        <div style={styles.measurementItem}><span style={styles.label}>EC to Left Pupil (LP)</span><span style={styles.value}>{eyeBalance.ECLP.toFixed(2)} cm</span></div>
-                        <div style={styles.measurementItem}><span style={styles.label}>A to LEi</span><span style={styles.value}>{eyeBalance.ALEi.toFixed(2)} cm</span></div>
-                        <div style={styles.measurementItem}><span style={styles.label}>A to REi</span><span style={styles.value}>{eyeBalance.RLEi.toFixed(2)} cm</span></div>
-                        <div style={styles.measurementItem}><span style={styles.label}>D to LEi</span><span style={styles.value}>{eyeBalance.DLEi.toFixed(2)} cm</span></div>
-                        <div style={styles.measurementItem}><span style={styles.label}>D to REi</span><span style={styles.value}>{eyeBalance.DREi.toFixed(2)} cm</span></div>
-                        <div style={styles.measurementItem}><span style={styles.label}>D to REO</span><span style={styles.value}>{eyeBalance.DREo.toFixed(2)} cm</span></div>
 
-                        <div style={styles.measurementItem}><span style={styles.label}>EC to Right Pupil (RP)</span><span style={styles.value}>{eyeBalance.ECRP.toFixed(2)} cm</span></div>
-                        <div style={styles.measurementItem}><span style={styles.label}>Pupil Balance Difference</span><span style={{ ...styles.value, color: '#D9534F' }}>{eyeBalance.diff.toFixed(2)} cm</span></div>
-                        <div style={styles.measurementItem}><span style={styles.label}>Left Pupil (LP) to Chin Line (E)</span><span style={styles.value}>{newMeasures.LPToChin.toFixed(2)} cm</span></div>
-                        <div style={styles.measurementItem}><span style={styles.label}>RP to Chin Line (E)</span><span style={styles.value}>{newMeasures.RPToChin.toFixed(2)} cm</span></div>
-
-                    </div>
-                </div>
-                <div style={{ ...styles.panel, borderLeft: '4px solid #3498DB' }} className="panel2">
-                    <h4 style={{ ...styles.panelTitle, color: '#3498DB' }}>Nose, Mouth, & Ear Ratios</h4>
-
-                    <div style={styles.measurementGroup}>
-                        <strong>Nose Geometry</strong>
-                        <div style={styles.measurementItem}><span style={styles.label}>Brow (A) to Nose Top (Nt)</span><span style={styles.value}>{newMeasures.AToNt.toFixed(2)} cm</span></div>
-                        <div style={styles.measurementItem}><span style={styles.label}>Nose Height (Nt to Nb)</span><span style={styles.value}>{noseHt.toFixed(2)} cm</span></div>
-                        <div style={styles.measurementItem}><span style={styles.label}>Nose Width (Nb to Nr)</span><span style={styles.value}>{noseMeasure.NbNr.toFixed(2)} cm</span></div>
-                        <div style={styles.measurementItem}><span style={styles.label}>Nose Width (Nt to Nl)</span><span style={styles.value}>{noseMeasure.NtNl.toFixed(2)} cm</span></div>
-                        <div style={styles.measurementItem}><span style={styles.label}>Nose Width (Nt to Nr)</span><span style={styles.value}>{noseMeasure.NrNt.toFixed(2)} cm</span></div>
-                    </div>
                     <div style={styles.measurementGroup}>
                         <strong>Mouth & Lip Metrics</strong>
                         <div style={styles.measurementItem}><span style={styles.label}>Mouth Width (ML to MR)</span><span style={styles.value}>{newMeasures.MouthW.toFixed(2)} cm</span></div>
