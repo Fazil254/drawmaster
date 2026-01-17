@@ -23,7 +23,7 @@ const Shop = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/artworks")
+    fetch("https://drawmaster-backend.onrender.com/artworks")
       .then((res) => res.json())
       .then((data) => setArtworks(data))
       .catch(() => console.error("Failed to load artworks"));
@@ -89,7 +89,7 @@ const Shop = () => {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/orders", {
+      const res = await fetch("https://drawmaster-backend.onrender.com/orders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(order),

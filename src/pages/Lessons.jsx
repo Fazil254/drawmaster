@@ -25,7 +25,7 @@ const filteredLessons = lessons.filter(item => {
 });
 
   useEffect(() => {
-    fetch("http://localhost:5000/lessons")
+    fetch("https://drawmaster-backend.onrender.com/lessons")
       .then((res) => res.json())
       .then((data) => {
         setLessons(data);

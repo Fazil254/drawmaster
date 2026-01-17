@@ -31,7 +31,7 @@ const AddLesson = () => {
       ...form,
       createdBy: user.id
     };
-    await fetch("http://localhost:5000/lessons", {
+    await fetch("https://drawmaster-backend.onrender.com/lessons", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newLesson)

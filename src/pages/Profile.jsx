@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import "../style/Profile.css";
 
+
+
+
 const Profile = () => {
   const { user, isLoggedIn, updateUser, logout } = useAuth();
 
@@ -22,7 +25,7 @@ const Profile = () => {
 
   useEffect(() => {
     if (!user) return;
-    fetch("http://localhost:5000/artists")
+    fetch("https://drawmaster-backend.onrender.com/artists")
       .then((res) => res.json())
       .then((artists) => {
         if (Array.isArray(user.following)) {
@@ -38,7 +41,7 @@ const Profile = () => {
         setMyArtist(mine || null);
       });
 
-    fetch("http://localhost:5000/orders")
+    fetch("https://drawmaster-backend.onrender.com/orders")
       .then(res => res.json())
       .then(setOrders);
 
@@ -78,7 +81,7 @@ const Profile = () => {
     };
 
     try {
-      await fetch("http://localhost:5000/artists", {
+      await fetch("https://drawmaster-backend.onrender.com/artists", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newArtist),
@@ -110,7 +113,7 @@ const Profile = () => {
 
     try {
       await fetch(
-        `http://localhost:5000/artists/${myArtist.id}`,
+        `https://drawmaster-backend.onrender.com/artists/${myArtist.id}`,
         { method: "DELETE" }
       );
 
@@ -120,7 +123,7 @@ const Profile = () => {
         )
         : [];
 
-      await fetch(`http://localhost:5000/users/${user.id}`, {
+      await fetch(`https://drawmaster-backend.onrender.com/users/${user.id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ following: updatedFollowing }),
@@ -144,13 +147,13 @@ const Profile = () => {
     try {
       if (myArtist) {
         await fetch(
-          `http://localhost:5000/artists/${myArtist.id}`,
+          `https://drawmaster-backend.onrender.com/artists/${myArtist.id}`,
           { method: "DELETE" }
         );
       }
 
       await fetch(
-        `http://localhost:5000/users/${user.id}`,
+        `https://drawmaster-backend.onrender.com/users/${user.id}`,
         { method: "DELETE" }
       );
 
@@ -193,7 +196,7 @@ const Profile = () => {
 
   try {
     const res = await fetch(
-      `http://localhost:5000/orders/${orderId}`,
+      `https://drawmaster-backend.onrender.com/orders/${orderId}`,
       { method: "DELETE" }
     );
 

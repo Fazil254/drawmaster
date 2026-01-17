@@ -11,19 +11,19 @@ const AdminDashboard = () => {
   // const [newClass, setNewClass] = useState("");
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("http://localhost:5000/lessons")
+    fetch("https://drawmaster-backend.onrender.com/lessons")
       .then(res => res.json())
       .then(setClasses);
 
-    fetch("http://localhost:5000/artists")
+    fetch("https://drawmaster-backend.onrender.com/artists")
       .then(res => res.json())
       .then(setArtists);
 
-    fetch("http://localhost:5000/users")
+    fetch("https://drawmaster-backend.onrender.com/users")
       .then(res => res.json())
       .then(setUsers);
 
-    fetch("http://localhost:5000/orders")
+    fetch("https://drawmaster-backend.onrender.com/orders")
       .then(res => res.json())
       .then(setOrders);
   }, []);
@@ -46,7 +46,7 @@ const AdminDashboard = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/lessons/${id}`,
+        `https://drawmaster-backend.onrender.com/lessons/${id}`,
         { method: "DELETE" }
       );
 
@@ -63,17 +63,17 @@ const AdminDashboard = () => {
     }
   };
   const deleteArtist = async (id) => {
-    await fetch(`http://localhost:5000/artists/${id}`, { method: "DELETE" });
+    await fetch(`https://drawmaster-backend.onrender.com/artists/${id}`, { method: "DELETE" });
     setArtists(artists.filter(a => a.id !== id));
   };
   const deleteOrder = async (id) => {
-    await fetch(`http://localhost:5000/orders/${id}`, { method: "DELETE" });
+    await fetch(`https://drawmaster-backend.onrender.com/orders/${id}`, { method: "DELETE" });
     setOrders(orders.filter(o => o.id !== id));
   };
 
   const deleteUser = async (id) => {
     if (!window.confirm("Are you sure you want to remove this user?")) return;
-    await fetch(`http://localhost:5000/users/${id}`, {
+    await fetch(`https://drawmaster-backend.onrender.com/users/${id}`, {
       method: "DELETE",
     });
     setUsers(prev => prev.filter(u => u.id !== id));

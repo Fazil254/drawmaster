@@ -8,7 +8,7 @@ const LessonPlayer = () => {
   const [lesson, setLesson] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/lessons/${id}`)
+    fetch(`https://drawmaster-backend.onrender.com/lessons/${id}`)
       .then((res) => res.json())
       .then((data) => setLesson(data))
       .catch(() => console.warn("Lesson not loaded"));

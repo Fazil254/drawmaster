@@ -5,7 +5,7 @@ import "../style/RegisterForm.css";
 
 function Login() {
   const navigate = useNavigate();
-  const { login } = useAuth(); 
+  const { login } = useAuth();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -20,7 +20,7 @@ function Login() {
     setMsg("");
 
     try {
-      const res = await fetch("http://localhost:5000/users");
+      const res = await fetch("https://drawmaster-backend.onrender.com/users");
       const users = await res.json();
 
       const user = users.find(
@@ -49,7 +49,7 @@ function Login() {
     setMsg("");
 
     try {
-      const res = await fetch("http://localhost:5000/users");
+      const res = await fetch("https://drawmaster-backend.onrender.com/users");
       const users = await res.json();
 
       const user = users.find((u) => u.email === resetEmail);
@@ -59,7 +59,7 @@ function Login() {
         return;
       }
 
-      await fetch(`http://localhost:5000/users/${user.id}`, {
+      await fetch(`https://drawmaster-backend.onrender.com/users/${user.id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password: newPassword }),

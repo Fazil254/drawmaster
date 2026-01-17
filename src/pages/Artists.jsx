@@ -6,7 +6,7 @@ const Artists = () => {
   const { user, isLoggedIn, updateUser } = useAuth();
   const [artists, setArtists] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/artists")
+    fetch("https://drawmaster-backend.onrender.com/artists")
       .then((res) => res.json())
       .then((data) => setArtists(data))
       .catch(() => console.warn("Could not load artists"));
@@ -26,7 +26,7 @@ const Artists = () => {
       ? following.filter((fid) => fid !== id)
       : [...following, id];
     try {
-      await fetch(`http://localhost:5000/users/${user.id}`, {
+      await fetch(`https://drawmaster-backend.onrender.com/users/${user.id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ following: updatedFollowing }),
@@ -37,7 +37,7 @@ const Artists = () => {
       const updatedFollowers = isFollowing
         ? Math.max(0, artist.followers - 1)
         : artist.followers + 1;
-      await fetch(`http://localhost:5000/artists/${id}`, {
+      await fetch(`https://drawmaster-backend.onrender.com/artists/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ followers: updatedFollowers }),
